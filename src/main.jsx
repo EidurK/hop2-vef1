@@ -25,6 +25,7 @@ async function render(root, querystring){
     return renderContentPage(root, mainIndexJson, params);
   }
 
+  console.log(`json: ${JSON.stringify(mainIndexJson)}`);
   renderSubpage(root, mainIndexJson, params);
 }
 
