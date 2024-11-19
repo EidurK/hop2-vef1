@@ -1,13 +1,10 @@
-import './index.css'
+import '/style.css'
 
 import { dynamicSwitch } from '../lib/switch.js';
 import { fetcher } from '../lib/fetcher.js';
-import { renderIndexPage } from '../lib/pages/index-page.js';
-import { renderSubpage } from '../lib/pages/sub-page.js';
-import { renderContentPage } from '../lib/pages/content-page';
 
 
-async function render(root, querystring){ 
+async function render(root){ 
   const mainIndexJson = await fetcher('data/index.json');
 
   window.addEventListener('popstate', ()=>{
@@ -18,4 +15,4 @@ async function render(root, querystring){
 }
 
 const root = document.querySelector('#app');
-render(root, window.location.search);
+render(root);
