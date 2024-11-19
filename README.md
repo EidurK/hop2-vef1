@@ -1,8 +1,23 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Einfallt útlit fyrir með haus valmynd og fót fyrir allar index síður.
 
-Currently, two official plugins are available:
+### Önnur virkni
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Birting á námsefni, gildir sem tvö auka verkefni
+
+- [x] Efnið sem gefið er í `data/html/lectures.json`, `data/css/lectures.json`, `data/js/lectures.json` skal birta á sérstakri síðu.
+
+#### Birting á lykilhugtökum
+
+- [x] Efnið sem gefið er í `data/html/keywords.json`, `data/css/keywords.json`, `data/js/keywords.json` skal birta á sérstakri síðu.
+
+#### Birting á spurningum
+
+- [ ] Efnið sem gefið er í `data/html/questions.json`, `data/css/questions.json`, `data/js/questions.json` skal birta á sérstakri síðu.
+
+
+#### Eitthvað sem ykkur dettur í hug
+
+- [x] Syntax highlighting fyrir kóða í lectures
+
