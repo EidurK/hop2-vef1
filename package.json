@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "sass": "sass style.scss style.css",
+    "sass-watch": "sass --watch style.scss style.css",
+    "lint": "eslint . && stylelint style.scss './public/styles/*.scss'",
+    "lint-fix": "eslint . --fix && stylelint style.scss './public/styles/*.scss' --fix",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -24,6 +27,10 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "sass": "^1.79.4",
+    "stylelint": "^16.9.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
+    "stylelint-config-standard": "^36.0.1",
     "vite": "^5.4.10"
   }
 }

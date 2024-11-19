@@ -1,4 +1,8 @@
 # React + Vite
+## Keyrsla
+Vefsíðan er keyrð með
+1. `npm install`
+2. `npm run build`
 
 Einfallt útlit fyrir með haus valmynd og fót fyrir allar index síður.
 
