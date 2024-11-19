@@ -1,32 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 
+import { dynamicSwitch } from '../lib/switch.js';
 import { fetcher } from '../lib/fetcher.js';
 import { renderIndexPage } from '../lib/pages/index-page.js';
-import { renderSubpage } from '../lib//pages/sub-page.js';
+import { renderSubpage } from '../lib/pages/sub-page.js';
 import { renderContentPage } from '../lib/pages/content-page';
+
 
 async function render(root, querystring){ 
   const mainIndexJson = await fetcher('data/index.json');
 
-  const params = new URLSearchParams(querystring);
-  console.log(`params -> ${params}`)
-  const type = params.get('type');
-  const content = params.get('content');
-  console.log(`content -> ${content}`)
+  window.addEventListener('popstate', ()=>{
+    dynamicSwitch(root, mainIndexJson);
+  });
 
-  if (!type) {
-    return renderIndexPage(root, mainIndexJson);
-  }
-
-  if (content) {
-    return renderContentPage(root, mainIndexJson, params);
-  }
-
-  console.log(`json: ${JSON.stringify(mainIndexJson)}`);
-  renderSubpage(root, mainIndexJson, params);
+  return dynamicSwitch(root, mainIndexJson);
 }
 
 const root = document.querySelector('#app');
